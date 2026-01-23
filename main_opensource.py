@@ -238,6 +238,8 @@ def send_email_to_list(html_body, receivers):
 
     try:
         print("🔌 正在连接 SMTP 服务器...")
+        print(f"📧 SENDER_EMAIL: [{SENDER_EMAIL}]")  # ← 添加这行
+        print(f"🔑 密码长度: {len(SENDER_PASSWORD)}")  # ← 添加这行
         server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
         
@@ -291,4 +293,5 @@ if __name__ == "__main__":
                 send_email_to_list(html, receivers)
             else:
                 print("📭 收件人列表为空 (仅运行分析，不发送)")
+
 
