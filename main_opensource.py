@@ -20,7 +20,7 @@ SENDER_PASSWORD = os.environ.get("SENDER_PASSWORD", "")
 ENV_RECEIVER = os.environ.get("RECEIVER_EMAIL", "") 
 
 # 3. SMTP 服务器配置
-SMTP_SERVER = "smtp.163.com"
+SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465  # SSL 端口
 
 # 4. 环境判断
@@ -291,3 +291,4 @@ if __name__ == "__main__":
                 send_email_to_list(html, receivers)
             else:
                 print("📭 收件人列表为空 (仅运行分析，不发送)")
+
