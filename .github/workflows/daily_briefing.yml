@@ -1,11 +1,9 @@
-# Daily News Briefing - Auto Schedule Enabled
 name: Daily News Briefing
 
 on:
   schedule:
-    # UTC 14:00 = 太平洋时间 06:00 (PST)
     - cron: '0 14 * * *'
-  workflow_dispatch:  # 允许手动触发测试
+  workflow_dispatch:
 
 jobs:
   run-briefing:
