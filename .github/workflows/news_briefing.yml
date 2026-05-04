@@ -2,8 +2,8 @@ name: News Briefing
 
 on:
   schedule:
-    # 每天 12:30 UTC 运行，且排除周六 (6)
-    - cron: '30 12 * * 0-5,7'
+    # 每天 12:30 UTC 运行，排除周六 (6)
+    - cron: '30 12 * * 0-5'
   workflow_dispatch:
 
 jobs:
